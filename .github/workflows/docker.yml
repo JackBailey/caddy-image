@@ -18,5 +18,7 @@ jobs:
                   docker login -u $DOCKER_USER -p $DOCKER_PASS
             - name: Build the Docker image
               run: docker build . --file Dockerfile --tag jackbailey/caddy-image
+            - name: Build the image used for my VPS
+              run: docker build . --file Dockerfile-external --tag jackbailey/caddy-image:external
             - name: Docker Push
-              run: docker push jackbailey/caddy-image
+              run: docker push jackbailey/caddy-image --all-tags
