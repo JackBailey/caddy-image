@@ -7,6 +7,6 @@ RUN xcaddy build \
   --with github.com/mholt/caddy-dynamicdns \ 
   --with github.com/lanrat/caddy-dynamic-remoteip
 
-FROM caddy:2.7
+FROM caddy:2.7.6
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
