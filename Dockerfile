@@ -1,4 +1,4 @@
-FROM caddy:2.7-builder AS builder
+FROM caddy:2.7.6-builder AS builder
 
 RUN xcaddy build \
   --with github.com/caddyserver/replace-response \
