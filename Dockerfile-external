@@ -1,4 +1,4 @@
-FROM caddy:2.7-builder AS builder
+FROM caddy:2.8-builder AS builder
 
 RUN xcaddy build \
   --with github.com/caddyserver/replace-response \
@@ -6,6 +6,6 @@ RUN xcaddy build \
   --with github.com/WeidiDeng/caddy-cloudflare-ip \
   --with github.com/mholt/caddy-l4
 
-FROM caddy:2.7
+FROM caddy:2.8
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
