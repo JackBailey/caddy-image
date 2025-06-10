@@ -5,7 +5,8 @@ RUN xcaddy build \
   --with github.com/caddy-dns/cloudflare \
   --with github.com/WeidiDeng/caddy-cloudflare-ip \
   --with github.com/mholt/caddy-l4 \
-  --with github.com/abiosoft/caddy-exec
+  --with github.com/abiosoft/caddy-exec \
+  --with github.com/lucaslorentz/caddy-docker-proxy
 
 FROM caddy:2.8
 
